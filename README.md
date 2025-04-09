@@ -30,7 +30,7 @@ Apply the TOP N filter and the context filter in VizQL Data Service to get the o
 
 The Output:
 
-![image](https://github.com/le-luu/DataDevQuest_2025_03/blob/main/img/2025_03_Intermediate_output.png)
+![image](img/2025_03_Intermediate_output.png)
 
 ### Instructions
 - You need to install Python in your local computer or following the instructions from the DataDevQuest Challenge in Postman
