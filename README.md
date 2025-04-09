@@ -17,6 +17,7 @@ Link to the Challenge: https://datadevquest.com/ddq2025-03-vizql-data-service-vd
 Apply the filter in VizQL Data Service to filter the Category to keep only Furniture, and Technology.
 
 The output:
+
 ![image](https://github.com/le-luu/DataDevQuest_2025_03/blob/main/img/2025_03_beginner_output.png)
 
 ### Intermediate Challenge
@@ -28,6 +29,7 @@ Link to the Challenge: https://datadevquest.com/ddq2025-03-vizql-data-service-vd
 Apply the TOP N filter and the context filter in VizQL Data Service to get the output same as the output data in Tableau Desktop.
 
 The Output:
+
 ![image](https://github.com/le-luu/DataDevQuest_2025_03/blob/main/img/2025_03_Intermediate_output.png)
 
 ### Instructions
@@ -37,7 +39,7 @@ The Output:
     ```
     cd DataDevQuest_2025_03
     ```
-- - Install and activate the virtual environment
+- Install and activate the virtual environment
     ```
     pip install virtualenv
     virtualenv venv
