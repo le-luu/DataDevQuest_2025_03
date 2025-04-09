@@ -59,7 +59,9 @@ def query_data(token, url, LUID):
         "query": {
             "fields": [
               {
-                "fieldCaption": "Region"
+                "fieldCaption": "Region",
+                "sortPriority": 2,
+                "sortDirection": "ASC"
               },
               {
                 "fieldCaption": "Sub-Category"
@@ -71,7 +73,9 @@ def query_data(token, url, LUID):
               },
               {
                 "fieldCaption": "Total Sales by Sub-Category",
-                "calculation": "{FIXED [Sub-Category]: SUM([Sales])}",
+                "calculation": "{FIXED [Sub-Category]: SUM([Sales])}",                
+                "sortPriority": 1,
+                "sortDirection": "DESC",
                 "maxDecimalPlaces": 0
               }
             ],
@@ -129,7 +133,7 @@ def main():
     SITE_ID = "Your_SITE_ID"
 
     QUERY_URL = "https://10ax.online.tableau.com/api/v1/vizql-data-service/query-datasource"
-    LUID = "Your_Datasource_LUID"
+    LUID = "Your_LUID"
     
     #Call the get_token function to retrieve the token
     token = get_token(url, PAT_NAME, PAT_SECRET, SITE_ID)
