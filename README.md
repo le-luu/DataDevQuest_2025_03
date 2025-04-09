@@ -8,6 +8,9 @@ Cristian Saavedra Desmoineaux
 ### Objective
 Familiarize yourself with VizQL Data Service, and connect and execute a query to a published data source.
 
+### Solution Video
+![image](https://www.youtube.com/watch?v=xYQP1ntA4_M)
+
 ### Beginner Challenge
 
 Link to the Challenge: https://datadevquest.com/ddq2025-03-vizql-data-service-vds-beginner/
