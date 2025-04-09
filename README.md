@@ -49,7 +49,7 @@ The Output:
     ```
     pip install -r requirements.txt
     ```
-    It may takes a few minutes to install all packages:
+    It may takes a few seconds to install all packages:
     - requests
     - pandas
     - json
