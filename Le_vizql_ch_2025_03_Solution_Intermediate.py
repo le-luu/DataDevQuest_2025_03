@@ -70,7 +70,7 @@ def query_data(token, url, LUID):
                 "maxDecimalPlaces": 0
               },
               {
-                "fieldCaption": "total_sales",
+                "fieldCaption": "Total Sales by Sub-Category",
                 "calculation": "{FIXED [Sub-Category]: SUM([Sales])}",
                 "maxDecimalPlaces": 0
               }
@@ -84,7 +84,7 @@ def query_data(token, url, LUID):
                 "filterType": "TOP",
                 "howMany": 10,
                 "fieldToMeasure": {
-                  "fieldCaption": "total_sales",
+                  "fieldCaption": "Total Sales by Sub-Category",
                   "calculation": "{FIXED [Sub-Category]: SUM([Sales])}"
                 },
                 "direction": "TOP"
@@ -129,7 +129,7 @@ def main():
     SITE_ID = "Your_SITE_ID"
 
     QUERY_URL = "https://10ax.online.tableau.com/api/v1/vizql-data-service/query-datasource"
-    LUID = "YOUR_LUID"
+    LUID = "Your_Datasource_LUID"
     
     #Call the get_token function to retrieve the token
     token = get_token(url, PAT_NAME, PAT_SECRET, SITE_ID)
@@ -138,7 +138,11 @@ def main():
     my_data = query_data(token,QUERY_URL,LUID)
 
     #Print out the screen
-    print("Result of DataDev Quest 2025-03 VDS:")
+    print("==========================================================")
+    print("====== DataDev Quest 2025-03 Intermediate Challenge ======")
+    print("====== Challenged By: Cristian Saavedra Desmoineaux ======")
+    print("====== Solved By: Le Luu                            ======")
+    print("==========================================================\n")
     print(my_data)
 
 if __name__ == "__main__":

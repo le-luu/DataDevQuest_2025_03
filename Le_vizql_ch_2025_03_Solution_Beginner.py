@@ -57,17 +57,14 @@ def query_data(token, url, LUID):
         },
         #send the query to server with fields, and filters
         "query": {
-            "fields": [
+            "fields": [#There are 2 fields: Region and Sum of Sales
                 {
                     "fieldCaption": "Region"
                 },
-                #I add this field to check if the Category only returns Furniture and Technology
-                {
-                    "fieldCaption": "Category"
-                },
                 {
                     "fieldCaption": "Sales",
-                    "function": "SUM"
+                    "function": "SUM",
+                    "maxDecimalPlaces": 0 #Set the decimal place to 0
                 }
             ],
             #The challenge requests the Category by keeping only Furniture and Technology
@@ -79,7 +76,7 @@ def query_data(token, url, LUID):
                     },
                     "filterType": "SET",
                     "values": ["Furniture", "Technology"],
-                    "exclude": False
+                    "exclude": False #Exclude to False to keep only those values
                 }
             ]
         }
@@ -104,8 +101,8 @@ def query_data(token, url, LUID):
 def main():
     url = "https://10ax.online.tableau.com/api/3.24/auth/signin"
     PAT_NAME = "test"
-    PAT_SECRET = "Your_PAT_Secret"
-    SITE_ID = "Your_Site_ID"
+    PAT_SECRET = "Your_PAT_SECRET"
+    SITE_ID = "Your_SITE_ID"
 
     QUERY_URL = "https://10ax.online.tableau.com/api/v1/vizql-data-service/query-datasource"
     LUID = "Your_Datasource_LUID"
@@ -117,7 +114,11 @@ def main():
     my_data = query_data(token,QUERY_URL,LUID)
 
     #Print out the screen
-    print("Result of DataDev Quest 2025-03 VDS:")
+    print("==========================================================")
+    print("====== DataDev Quest 2025-03 Beginner Challenge     ======")
+    print("====== Challenged By: Cristian Saavedra Desmoineaux ======")
+    print("====== Solved By: Le Luu                            ======")
+    print("==========================================================\n")
     print(my_data)
 
 if __name__ == "__main__":
