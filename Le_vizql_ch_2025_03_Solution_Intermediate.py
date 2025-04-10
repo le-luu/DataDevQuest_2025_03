@@ -60,8 +60,8 @@ def query_data(token, url, LUID):
             "fields": [
               {
                 "fieldCaption": "Region",
-                "sortPriority": 2,
-                "sortDirection": "ASC"
+                "sortPriority": 2, # the region will be sorted after the Total Sales by Sub-Category was sorted
+                "sortDirection": "ASC" # sorting in Ascending order to let the East show first and then West
               },
               {
                 "fieldCaption": "Sub-Category"
@@ -73,9 +73,9 @@ def query_data(token, url, LUID):
               },
               {
                 "fieldCaption": "Total Sales by Sub-Category",
-                "calculation": "{FIXED [Sub-Category]: SUM([Sales])}",                
-                "sortPriority": 1,
-                "sortDirection": "DESC",
+                "calculation": "{FIXED [Sub-Category]: SUM([Sales])}",  # Use the FIXED LOD to calculate the sum of sales grouped by each Sub-Category              
+                "sortPriority": 1, # Add the sortPriority to 1 to sort this column first
+                "sortDirection": "DESC", # in Descending order
                 "maxDecimalPlaces": 0
               }
             ],
@@ -85,11 +85,11 @@ def query_data(token, url, LUID):
                 "field": {
                   "fieldCaption": "Sub-Category"
                 },
-                "filterType": "TOP",
+                "filterType": "TOP", #Defined the TOP 10 sub-category
                 "howMany": 10,
-                "fieldToMeasure": {
+                "fieldToMeasure": { #based on the Total sales by sub-category field
                   "fieldCaption": "Total Sales by Sub-Category",
-                  "calculation": "{FIXED [Sub-Category]: SUM([Sales])}"
+                  "calculation": "{FIXED [Sub-Category]: SUM([Sales])}" # it is defined by this calculation
                 },
                 "direction": "TOP"
               },
@@ -104,7 +104,7 @@ def query_data(token, url, LUID):
                   "West"
                 ],
                 "exclude": False,
-                "context": True
+                "context": True # because we used the FIXED LOD, so need to set the context filter for the Region
               }
             ]
         }
