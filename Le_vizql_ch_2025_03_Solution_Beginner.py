@@ -59,7 +59,8 @@ def query_data(token, url, LUID):
         "query": {
             "fields": [#There are 2 fields: Region and Sum of Sales
                 {
-                    "fieldCaption": "Region"
+                    "fieldCaption": "Region",
+                     "sortPriority": 1
                 },
                 {
                     "fieldCaption": "Sales",
