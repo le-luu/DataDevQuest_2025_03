@@ -87,9 +87,9 @@ def query_data(token, url, LUID):
                 },
                 "filterType": "TOP", #Defined the TOP 10 sub-category
                 "howMany": 10,
-                "fieldToMeasure": { #based on the Total sales by sub-category field
-                  "fieldCaption": "Total Sales by Sub-Category",
-                  "calculation": "{FIXED [Sub-Category]: SUM([Sales])}" # it is defined by this calculation
+                "fieldToMeasure": { 
+                    "fieldCaption": "Sales",
+                    "function": "SUM"
                 },
                 "direction": "TOP"
               },
